@@ -1,0 +1,610 @@
+/**************************************************css section****************************************/
+
+/*****************styling elements******************/
+body{
+    color: #40514E;
+   margin: 0;
+   text-align: center;
+   font-family: 'Merriweather', serif;
+  
+   
+
+ 
+}
+
+h1{
+    font-size: 5.625rem;
+    margin: 2.6rem auto 0 auto;
+    font-family: 'Sacramento', cursive;
+    color: #66BFBF;
+}
+
+h2{
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    color: #66BFBF;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E;
+}
+
+p{
+    line-height: 2;
+}
+
+hr{
+    border: dotted gray 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 100px auto;
+}
+
+
+
+
+
+
+
+
+
+
+/***************************NAVBAR CSS*********************************************************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #635985;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: orange;
+}
+
+/****header*****/
+header{
+    position: relative;
+    padding: 1rem 2rem;
+    color: #13f5e2;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+color: #fff;
+font-size: 1.5rem;
+cursor: pointer;
+display: none;
+}
+
+.action_btn{
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transform: scale 0.2 ease;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    color: #fff;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+
+/*********dropdown menu***********/
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+}
+
+.dropdown_menu li:hover{
+    color: orange;
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/****responsive desiign******/
+@media (max-width: 992px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+    
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+
+
+
+.navbar{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+     
+    
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed; /* Stick to the top */
+    width: 100%; /* Full width */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+
+
+
+
+
+
+.starting{
+    padding-top: 50px;
+}
+
+.me{
+    color: white;
+    }
+
+
+/*************spacing******************/
+.profile{
+    padding-top: 100px;
+
+}
+
+
+/*here*/
+
+/* Add this CSS for the active link styles */
+.navbar ul.links li a.active {
+    color: orangered; /* Change this to your desired active color */
+    /* Add other active link styles as needed */
+}
+
+.dropdown_menu li a.active {
+    color: orangered; /* Change this to your desired active color */
+    /* Add other active link styles as needed */
+}
+
+/*here*/
+/* Style for the switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide the default checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Style for the slider (the "button" that slides) */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  /* Style for the slider when it's in the "on" state */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  /* Style for the slider when the checkbox is checked (on state) */
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  /* Style for the slider's button when the checkbox is checked (on state) */
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*here*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*here*/
+/* Add these styles to your style.css file */
+body {
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out; /* Smooth transition for background color and text color */
+  }
+  
+  body.light-mode {
+    background-color: #fff; /* Light mode background color */
+    color: #333; /* Light mode text color */
+  }
+  
+  body.dark-mode {
+    background-color: #111; /* Dark mode background color */
+    color: #fff; /* Dark mode text color */
+  }
+  
+  /* Style for the entire header, including the navbar */
+  header {
+    background-color: #333; /* Default navbar background color */
+    color: #fff;
+    transition: background-color 0.5s ease-in-out; /* Smooth transition for background color */
+  }
+  
+  header.light-mode {
+    background-color: #333; /* Light mode navbar background color */
+    color: #fff; /* Light mode navbar text color */
+  }
+  
+  header.dark-mode {
+    background-color: #000; /* Dark mode navbar background color */
+    color: #fff; /* Dark mode navbar text color */
+  }
+  
+
+
+
+
+
+
+
+/* Add these styles to your style.css file */
+/* Apply dark mode to the entire profile section except the Mayowa image */
+.dark-mode .profile:not(.mayowa-image) {
+    background-color: #111; /* Dark mode background color for the profile section */
+    color: #fff; /* Dark mode text color for the profile section */
+  }
+  
+  /* Style for the Mayowa image */
+  .mayowa-image {
+    filter: grayscale(0%); /* Keep the image in color */
+    /* Add any other styles you want for the Mayowa image */
+  }
+  
+  /* Rest of the dark mode styles (e.g., for body and header) remain the same */
+  
+  
+  /* Add smooth scrolling behavior to anchor links */
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+  
+
+
+
+/**********************************NAVBAR ENDING CSS************************************************/
+
+
+
+
+
+
+
+
+/*******The containers*****/
+.top-container{
+    background-color: #E4F1FF;
+    position: relative;
+    padding-top: 120px;
+   
+
+}
+
+.middle-container{
+   background-color: white;
+   margin: 100px 0;   
+}
+
+.bottom-container{
+  background-color: #66BFBF;
+  padding: 50px 0 20px;
+}
+
+
+
+
+
+/********top-container classes******/
+.top-star{
+    height: 40px;
+    position: absolute;
+    right: 300px;
+    top: 40px;
+}
+
+.bottom-star{
+    height: 40px;
+    position: absolute;
+    left: 250px;
+    bottom: 300px;
+}
+
+.Pro{
+    text-decoration: underline;
+}
+
+
+/****introduction-classes***/
+
+
+.intro{
+    width: 90%;
+    margin: auto;
+    
+}
+
+.Hi{
+   
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mayowa{
+width: 20%;
+margin: auto;
+}
+
+
+
+
+
+/*****qualities-classes***/
+
+.qualities-row{
+    width: 50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+    line-height: 2;
+}
+
+.neat-code{
+    width: 20%;
+    float: left;
+    margin-right: 30px;
+}
+
+.online{
+    width: 20%;
+    float: right;
+    margin-left: 30px;
+}
+
+.responsive{
+    width: 20%;
+    float: left;
+    margin-right: 30px;
+}
+
+.thinker{
+    width: 20%;
+    float: right;
+    margin-left: 30px;
+}
+
+.web-dev{
+    width: 20%;
+    float: left;
+    margin-right: 30px;
+}
+
+
+
+
+
+/****skill-classes***/
+
+
+.myskills-row{
+    width: 50%;
+    margin: 100px auto;
+    text-align: left;
+    line-height: 2;
+}
+
+.bicycle{
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+
+.meditation{
+width: 25%;
+float: right;
+margin-left: 30px;
+}
+
+.computing{
+width: 25%;
+float: left;
+margin-right: 30px;
+}
+
+
+
+
+
+
+
+.contact-message{
+    width: 40%;
+    margin: 40px auto 60px ;
+}
+
+
+
+/********icons*******/
+.instagram{
+    height: 45px;
+    
+}
+
+.instagram:hover{
+    color: #EAF6F6;
+}
+
+.X{
+    height: 45px;
+}
+
+.website{
+    height: 45px;
+
+}
+
+.copyright{
+   color: #E4F1FF; 
+   padding: 20px 0;
+}
+
+
+
+
+.btn {
+    background: #3ce64d;
+    background-image: -webkit-linear-gradient(top, #3ce64d, #13f5e2);
+    background-image: -moz-linear-gradient(top, #3ce64d, #13f5e2);
+    background-image: -ms-linear-gradient(top, #3ce64d, #13f5e2);
+    background-image: -o-linear-gradient(top, #3ce64d, #13f5e2);
+    background-image: linear-gradient(to bottom, #3ce64d, #13f5e2);
+    -webkit-border-radius: 7;
+    -moz-border-radius: 7;
+    border-radius: 7px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    }
+
+    
+  
+  .btn:hover {
+    background: #a1f0aa;
+    background-image: -webkit-linear-gradient(top, #a1f0aa, #a1bcff);
+    background-image: -moz-linear-gradient(top, #a1f0aa, #a1bcff);
+    background-image: -ms-linear-gradient(top, #a1f0aa, #a1bcff);
+    background-image: -o-linear-gradient(top, #a1f0aa, #a1bcff);
+    background-image: linear-gradient(to bottom, #a1f0aa, #a1bcff);
+    text-decoration: none;
+  }
